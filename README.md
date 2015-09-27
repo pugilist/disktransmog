@@ -5,6 +5,14 @@ This script is designed to allow individuals to translate different disk referen
 
 ----------
 
+Installation / Requirements
+-------------
+
+This script is written for python 3.4.  To install, run the following as root:
+```bash
+bash install.sh
+```
+
 
 Usage
 -------------
