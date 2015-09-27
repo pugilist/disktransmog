@@ -8,23 +8,24 @@ This script is designed to allow individuals to translate different disk referen
 
 Usage
 -------------
->**Help output**
->usage: disktransmog [-h] [-f] (-d | -i | -l | -p | -u | -U) string
+```
+Help output
+usage: disktransmog [-h] [-f] (-d | -i | -l | -p | -u | -U) string
 
->Transmogrify your disk labels
+Transmogrify your disk labels
 
->positional arguments:
- > string              input the disk label that you'd like to convert
+positional arguments:
+  string              input the disk label that you'd like to convert
 
->optional arguments:
->  -h,  --help          show this help message and exit
->  -f,   --full-path     show full path in output
->  -d,  --to-dev        find the associated device
->  -i,   --to-id         find the associated id
->  -l,   --to-partlabel  find the associated partition label
->  -p,  --to-path       find the associated path
->  -u,  --to-uuid       find the associated disk uuid
->  -U, --to-partuuid   find the associated partition uuid
+optional arguments:
+  -h,  --help          show this help message and exit
+  -f,   --full-path     show full path in output
+  -d,  --to-dev        find the associated device
+  -i,   --to-id         find the associated id
+  -l,   --to-partlabel  find the associated partition label
+  -p,  --to-path       find the associated path
+  -u,  --to-uuid       find the associated disk uuid
+  -U, --to-partuuid   find the associated partition uuid
 
 Note:
 String can be a any of the following.
