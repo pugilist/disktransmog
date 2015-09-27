@@ -64,7 +64,6 @@ def match_item(args,file_list,method):
 	# Since some system sare different and contain different folders in /dev/disk, if we throw a KeyError this means simply that the folder we're looking for does not exist on the system.  Return None and continue on.
 	try:
 		for item in file_list[method]:
-			#print(item + " --- " + os.path.join('/dev/',dev) + " <-> " + os.path.realpath(os.path.join(base_path,method,item)))
 			if os.path.join('/dev/',dev) == os.path.realpath(os.path.join(base_path,method,item)):
 				return item
 	except KeyError:
@@ -76,12 +75,12 @@ if __name__ == '__main__':
 	parser.add_argument("input_string",metavar="string",help="input the disk label that you'd like to convert")
 	parser.add_argument("-f","--full-path",action="store_true",default=False,help="show full path in output")
 	required_options = parser.add_mutually_exclusive_group(required=True)
-	required_options.add_argument("-d","--to-dev",action="store_true",help="find the assocated device")
+	required_options.add_argument("-d","--to-dev",action="store_true",help="find the associated device")
 	required_options.add_argument("-i","--to-id",action="store_true",help="find the associated id")
 	required_options.add_argument("-l","--to-partlabel",action="store_true",help="find the associated partition label")
 	required_options.add_argument("-p","--to-path",action="store_true",help="find the associated path")
 	required_options.add_argument("-u","--to-uuid",action="store_true",help="find the associated disk uuid")
-	required_options.add_argument("-U","--to-partuuid",action="store_true",help="find the assocaited partition uuid")
+	required_options.add_argument("-U","--to-partuuid",action="store_true",help="find the associated partition uuid")
 
 	args = parser.parse_args()
 
